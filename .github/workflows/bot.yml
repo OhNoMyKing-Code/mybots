@@ -46,7 +46,7 @@ jobs:
 
       - name: Make Stockfish Executable
         run: | 
-             chmod +x ./engines/chatgpt_ai_chess-linux-x64
+             chmod +x ./engines/chessai
              
       - name: Run Bot
         run: |
@@ -65,5 +65,6 @@ jobs:
         run: gh workflow run bot.yml
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
