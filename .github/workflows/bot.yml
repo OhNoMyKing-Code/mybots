@@ -16,7 +16,7 @@ jobs:
       group: bot-run
       cancel-in-progress: false  # Keep this false for fastest restarts
 
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 355  # Just under 6-hour GitHub limit
 
     steps:
@@ -65,6 +65,7 @@ jobs:
         run: gh workflow run bot.yml
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
 
