@@ -51,7 +51,7 @@ jobs:
       - name: Run Bot
         run: |
               echo "Starting bot..."
-              python3 -u user_interface.py "matchmaking" &
+              python3 -u user_interface.py --upgrade "matchmaking" &
               PID=$!
 
               # Stop bot gracefully at 350 minutes = 21000 seconds
@@ -65,6 +65,7 @@ jobs:
         run: gh workflow run bot.yml
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
 
 
 
